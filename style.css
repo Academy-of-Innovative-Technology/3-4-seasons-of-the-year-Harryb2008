@@ -1,26 +1,101 @@
 html {
-	height: 100%;
-	width: 100%;
+    height: 100%;
+    width: 100%;
 }
-
+	body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
 .season-container {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
-
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 .month-card {
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	overflow: hidden;
-	margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
-
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
 .month-card img {
-	width: 100%;
-	height: 150px;
-	object-fit: cover;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+.month-card-body {
+    padding: 15px;
+    text-align: center;
+}
+.seasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+.season-card {
+    background: white;
+    border: 2px solid #dee2e6;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+.season-card:hover {
+    transform: scale(1.02);
+}
+.season img {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #ccc;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 10px;
 }
 
-.month-card-body {
-	padding: 15px;
-	text-align: center;
+.season-content {
+    padding: 20px;
+}
+.season-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.months-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.month-item {
+    font-size: 1.1rem;
+    padding: 5px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+.month-item:last-child {
+    border-bottom: none;
+}
+/* Seasonal Colors */
+.winter { background-color: #e7f5ff; border-color: #a5d8ff; }
+.spring { background-color: #ebfbee; border-color: #b2f2bb; }
+.summer { background-color: #fff9db; border-color: #ffec99; }
+.fall { background-color: #fff4e6; border-color: #ffd8a8; }
+@media (max-width: 600px) {
+    .seasons-grid {
+        grid-template-columns: 1fr;
+    }
 }
